@@ -4,7 +4,6 @@ function mostrar()
 {
 var dato;
      dato = prompt ("Ingrese nombre","nombre")
-
      alert (dato); 
 }
 

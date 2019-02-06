@@ -4,8 +4,8 @@
 */
 function mostrar()
 {
-	var nombre;
-	nombre = prompt ("Datos");
-	document.getElementById ("elNombre").value = nombre;
+	var dato;
+	dato = prompt ("Ingrese datos");
+	document.getElementById ("elNombre").value = dato;
 }
 
