@@ -4,7 +4,7 @@ function mostrar()
 {
     var id;
     id = document.getElementById ("elNombre").value;
-    alert (id)
+    alert (id);
 }
 
 
