@@ -9,18 +9,30 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 */
 var numeroSecreto; 
 var contadorIntentos;
-
+numeroSecreto = Math.floor((Math.random () * (101 - 1)) + 1);
 function comenzar()
-{
+{ 
 	//Genero el número RANDOM entre 1 y 100
 	 
-		//alert(numeroSecreto );
-	
+    //
+  alert(numeroSecreto);
+  
 
 }
 
 function verificar()
 {
-	
+  var ingreseNum;
+  ingreseNum = document.getElementById ("numero").value;
+  if (ingreseNum == numeroSecreto) {
+    alert ("“Usted es un ganador!!! y en solo X intentos”")
+  } else {
+    if (ingreseNum < numeroSecreto) {
+      alert ("falta...");
+    } else {
+      alert ("se paso...");
+    }
+  }
+  
 	
 }
