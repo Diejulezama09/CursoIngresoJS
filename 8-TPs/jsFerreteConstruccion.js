@@ -21,11 +21,20 @@ function Circulo ()
     var circulo;
     var alambre;
     radio = document.getElementById("Radio").value;
-    circulo = 2 * 3.14 * parseInt (radio);
+    circulo = 3.14 * (parseInt (radio) * parseInt(radio));
     alambre = parseInt(circulo) * 3;
-    alert (circulo);
+    alert (alambre);
 }
 function Materiales () 
 {
-	
+    var ancho;
+    var largo;
+    var cemento;
+    var cal;
+    largo = document.getElementById("Largo").value;
+    ancho = document.getElementById("Ancho").value;
+    cemento = parseInt(largo) * parseInt(ancho) * 2;
+    cal = parseInt(largo) * parseInt(ancho) * 3;
+    alert ("Se necesitan "+cemento+" bolsas de cemento y "+cal+" bolsas de cal");
+
 }

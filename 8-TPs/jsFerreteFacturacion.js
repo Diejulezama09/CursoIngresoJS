@@ -23,7 +23,7 @@ function Promedio ()
     precio2 = document.getElementById("PrecioDos").value;
     precio3 = document.getElementById("PrecioTres").value;
     promedio = (parseInt(precio1) + parseInt(precio2) + parseInt(precio3)) / 3;
-    alert = (promedio);
+    alert (promedio);
 }
 function PrecioFinal () 
 {

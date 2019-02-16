@@ -23,6 +23,7 @@ function comenzar()
 function verificar()
 {
   var ingreseNum;
+  contadorIntentos = 0
   ingreseNum = document.getElementById ("numero").value;
   if (ingreseNum == numeroSecreto) {
     alert ("“Usted es un ganador!!! y en solo X intentos”")
@@ -34,5 +35,10 @@ function verificar()
     }
   }
   
+  if (ingreseNum == numeroSecreto) {
+    document.getElementById("intentos").value = 1;
+  } else {
+    document.getElementById("intentos").value = parseInt(contadorIntentos) + 1;
+  }
 	
 }
