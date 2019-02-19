@@ -34,11 +34,5 @@ function verificar()
       alert ("se paso...");
     }
   }
-  
-  if (ingreseNum == numeroSecreto) {
-    document.getElementById("intentos").value = 1;
-  } else {
-    document.getElementById("intentos").value = parseInt(contadorIntentos) + 1;
-  }
 	
 }
