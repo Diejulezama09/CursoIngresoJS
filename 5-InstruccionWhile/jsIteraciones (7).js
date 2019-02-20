@@ -2,11 +2,21 @@ function mostrar()
 {
 
 	var contador=0;
-	var acumulador=0;
-	var respuesta='si';
+	var suma=0;
+  var respuesta="si";
 
+  while (respuesta != "no") {
+    contador++
+    respuesta=prompt("Indique si o no.");
+    numero=prompt ("ingrese numero");
+    numero=parseInt(numero);
+    suma+=numero;
 
-document.getElementById('suma').value=acumulador;
-document.getElementById('promedio').value=acumulador/contador;
+  }
+
+  promedio=suma / contador;
+
+document.getElementById("suma").value=suma;
+document.getElementById("promedio").value=suma/contador;
 
 }//FIN DE LA FUNCIÓN
