@@ -9,5 +9,23 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
- 
+  do {
+      edad=prompt("ingrese edad")
+  } while (edad < 18 || edad > 90);
+
+  do {
+      sexo=prompt("Ingrese m para Masculino o f para Femenino:")     
+  } while (sexo !="m" || sexo !="f");
+
+  do {
+      estadoCivil=prompt("Ingrese 1 si es soltero/a. Ingrese 2 si es casad/a. Ingrese 3 si es divorciad/A. Ingrese 4 si es viudo/a:")
+  } while (estadoCivil < 1 || estadoCivil > 4);
+
+  do {
+      sueldoBruto=prompt("Ingrese sueldo bruto");
+  } while (sueldoBruto < 8000);
+
+
+
+
 }
