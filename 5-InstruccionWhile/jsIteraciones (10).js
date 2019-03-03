@@ -1,63 +1,60 @@
 function mostrar()
 {
-
-	var contadorN=0;
-	var contadorP=0;
-	var contador0=0;
-	var contadorPares=0;
 	//declarar contadores y variables 
 	
-	var respuesta="si";
+	var numero;
+	var contadorNegativos=0
+	var contadorCeros=0;
+	var contadorPositivos=0;
 	var negativos=0;
 	var positivos=0;
-	var promedioPosi;
+	var contadorPares=0;
 	var promedioNeg;
-	var dif;
+	var promedioPost;
+	var diferencia;
+	var respuesta="si";
 
-
-	while(respuesta!="no")
+	while (respuesta!="no")
 	{
-		numero = prompt("Ingrese numero: ");
+		numero = prompt ("Ingrese un numero");
+		while (isNaN (numero)==true)
+		{
+			numero = prompt ("Error. Ingrese un numero");
+		}
+		numero= parseInt (numero);
 
-		numero = parseInt(numero);
+		if (numero!=0)
+		{
+			if (numero>0)
+			{
+				contadorPositivos++;
+				positivos=positivos+numero;
+			}
+			else
+			{
+				contadorNegativos++;
+				negativos=negativos+numero;
+			}
+		}
+		else
+		{
+			contadorCeros++;
+		}
 
-		respuesta = prompt("Desea seguir?");
 
-		if ( numero < 0){
+		if (numero%2==0)
+		{
+			contadorPares++;
+		}
 
-			negativos = negativos + numero;
-
-			contadorN ++;
-
-	} else if ( numero > 0){
-
-		positivos = positivos + numero;
-
-		contadorP ++;
-
-	} else if (numero==0){
-
-		contador0 ++;
-
-	} if (numero % 2 == 0 && numero != 0){
-		
-		contadorPares ++;
-
-	} promedioPosi = positivos / contadorP;
-	
-	promedioNeg = negativos / contadorN;
-	
-	dif = positivos - negativos;
-
-	parseInt(promedioPosi);
-	parseInt(promedioNeg);
-	parseInt(dif);
-
+		respuesta= prompt ("Desea continuar?");
 	}
 
-	document.write ("Suma de negativos: " + negativos + "<br>" + "Suma de positivos: " + positivos + "<br>" + "Cantidad de positivos: " + contadorP + "<br>" + "Cantidad de negativos: " + contadorN + "<br>" + "Cantidad de 0: " + contador0 + "<br>" + "Cantidad de numeros pares: " + contadorPares + "<br>" + "Promedio de negativos: " + promedioNeg + "<br>" + "Promedio de positivos: " + promedioPosi + "<br>" + "Diferencia entre positivos y negativos: " + dif)
+	promedioPost=positivos/contadorPositivos;
+	promedioNeg=negativos/contadorNegativos;
+	diferencia=positivos - negativos;
 
-
-
+		document.write ("Se ingresaron " + contadorPositivos + " numeros positivos. La suma de los mismos es " + positivos + " y su promedio: " + promedioPost + ". Se ingresaron " + contadorNegativos + " numeros negativos. La suma de los mismos es "
+	 + negativos + " y su promedio " + promedioNeg + ". Hay " + contadorPares + " numeros pares, y " + contadorCeros + " ceros ingresados. La diferencia entre positivos y negativos es de " + diferencia);
 
 }//FIN DE LA FUNCIÓN

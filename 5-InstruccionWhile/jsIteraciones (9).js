@@ -4,43 +4,30 @@ function mostrar()
 	var contador=0;
 	// declarar variables
 	
-	var respuesta = "si";
-	var numero;
-	var max;
-	var min;
-	
+	var maximo;
+    var minimo;
+    var numero;
+    var cantidad = 0;
+    var flag = false;
 
-	while(respuesta!='no')
-	{
-		numero = prompt("Ingrese numero: ");
-		numero = parseInt(numero);
-		respuesta = prompt( "Desea continuar?");
+    var respuesta = 'si';
 
-		if (contador == 0){
+    while (respuesta != 'no') {
+        numero = prompt("Ingrese un numero");
 
-			max = numero;
+        if (flag == false || numero > maximo) {
+            maximo = numero;
+        }
+        if (flag == false || numero < minimo) {
+            minimo = numero;
+            flag = true;
+        }
+        cantidad++;
+        respuesta = prompt("Desea ingresar otro numero?");
+    }
 
-			min = numero;
-		}
-
-		else if ( numero > max){
-
-			max = numero;
-
-		} 
-		
-		else if (numero < min){
-
-			min = numero;
-		}
-
-		contador++;
-		
-	
-	}
-
-	document.getElementById("maximo").value = max;
-	document.getElementById("minimo").value = min;
+    document.getElementById("maximo").value = maximo;
+    document.getElementById("minimo").value = minimo;
 	
 
 
